@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="print-text">text here</h1>
+    <input id="input-text" type="text">
+    <button id="update-text">Click Me</button>
+    <script>
+        document.getElementById('update-text').addEventListener('click', function(){
+            let textVar = document.getElementById('input-text').value;
+            document.getElementById('print-text').innerText = textVar ;
+        });
+    </script>
+</body>
+</html>
