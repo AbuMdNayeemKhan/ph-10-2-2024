@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Box</title>
+</head>
+<body>
+    <div id="comments">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, consequatur.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad consequatur aspernatur nihil repellat.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit.</p>
+    </div>
+    <textarea id="textarea" name="" id="" cols="50" rows="3"></textarea>
+    <button id="post">post</button>
+    <script>
+        document.getElementById('post').addEventListener('click', function(){
+            let textarea = document.getElementById('textarea');
+            let textareaValue = textarea.value
+            let newPTag = document.createElement('p');
+            newPTag.innerText = textareaValue;
+            document.getElementById('comments').appendChild(newPTag);
+            textarea.value = ' ';
+        });
+    </script>
+</body>
+</html>
